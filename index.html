@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <section id="loginPage" class="login-container">
+
+        <div class="login-card">
+            <h1>📒 Daily Notes</h1>
+            <p>Silakan login untuk masuk aplikasi</p>
+
+            <form id="loginForm">
+
+                <label>Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Masukkan username"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+
+                <button type="submit">LOGIN</button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN DASHBOARD -->
+    <section id="dashboardPage" class="container hidden">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>📒 Daily Notes</h1>
+                <p>Aplikasi Catatan Harian</p>
+                <p>Selamat datang, <b id="displayUsername"></b>!</p>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+
+        </header>
+
+        <main class="card">
+
+            <h2>Buat Catatan</h2>
+
+            <textarea
+                id="noteInput"
+                placeholder="Tuliskan catatan kamu..."
+            ></textarea>
+
+            <button id="addBtn">+ Simpan Catatan</button>
+
+            <h2 class="list-title">Daftar Catatan</h2>
+
+            <div id="noteList"></div>
+
+        </main>
+
+        <footer>
+            Daily Notes © 2026
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
